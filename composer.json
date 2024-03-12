@@ -1,0 +1,29 @@
+{
+    "name": "hacoidev/nguonc-crawler",
+    "description": "nguonc crawler",
+    "type": "package",
+    "require": {
+        "hacoidev/nguonc-core": "^1.0.0",
+        "intervention/image": "^2.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nguonc\\Crawler\\nguoncCrawler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hacoidev",
+            "email": "hacoi.dev@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "nguonc\\Crawler\\nguoncCrawler\\nguoncCrawlerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
