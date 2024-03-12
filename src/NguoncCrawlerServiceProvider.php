@@ -23,10 +23,10 @@ class nguoncCrawlerServiceProvider extends SP
     {
 
         config(['plugins' => array_merge(config('plugins', []), [
-            'hacoidev/nguonc-crawler' =>
+            'nguyenloc879/nguon' =>
             [
                 'name' => 'nguonc Crawler',
-                'package_name' => 'hacoidev/nguonc-crawler',
+                'package_name' => 'nguyenloc879/nguon',
                 'icon' => 'la la-hand-grab-o',
                 'entries' => [
                     ['name' => 'Crawler', 'icon' => 'la la-hand-grab-o', 'url' => backpack_url('/plugin/nguonc-crawler')],
@@ -38,7 +38,7 @@ class nguoncCrawlerServiceProvider extends SP
         config(['logging.channels' => array_merge(config('logging.channels', []), [
             'nguonc-crawler' => [
                 'driver' => 'daily',
-                'path' => storage_path('logs/hacoidev/nguonc-crawler.log'),
+                'path' => storage_path('logs/nguyenloc879/nguon-crawler.log'),
                 'level' => env('LOG_LEVEL', 'debug'),
                 'days' => 7,
             ],
