@@ -1,7 +1,7 @@
 {
     "name": "hacoidev/nguonc-crawler",
     "description": "nguonc crawler",
-    "type": "package",
+    "type": "library",
     "require": {
         "hacoidev/nguonc-core": "^1.0.0",
         "intervention/image": "^2.7"
@@ -21,9 +21,20 @@
     "extra": {
         "laravel": {
             "providers": [
-                "nguonc\\Crawler\\nguoncCrawler\\nguoncCrawlerServiceProvider"
+                "Nguonc\\Crawler\\nguoncCrawler\\nguoncCrawlerServiceProvider"
             ]
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload-dev": {
+        "psr-4": {
+            "Nguonc\\Crawler\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    }
 }
